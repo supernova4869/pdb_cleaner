@@ -10,11 +10,10 @@ Made by Supernova (https://www.zhihu.com/people/zhang-jia-xing-42-34)
 3. 重命名Glu, 若为质子化状态(包含HE2)则重命名为GLH
 4. 重命名末端羧基O, 将DS输出的OCT[12]改为OC[12]
 
-用法0: pdb_cleaner                        # 直接查看此帮助
-
-用法1: pdb_cleaner input.pdb output.pdb
-
-用法2: pdb_cleaner input.pdb              # 默认输出到new.pdb
+## Usage
+- Usage 0: pdb_cleaner                        # 直接查看此帮助
+- Usage 1: pdb_cleaner input.pdb output.pdb
+- Usage 2: pdb_cleaner input.pdb              # 默认输出到new.pdb
 
 ## Examples
 
