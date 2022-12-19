@@ -153,7 +153,7 @@ fn parse_pdb(pdb_content: String) -> PDB {
     let mut cur_res: i32 = pdb_content[3][22..26].trim().parse().unwrap();
     for line in pdb_content {
         if line.starts_with("CRYST1") {
-            crystallographic = line.trim().to_string();
+            crystallographic = line.trim()[7..].to_string();
         }
         if line.starts_with("ATOM") || line.starts_with("HETATM") || line.starts_with("TER") {
             let typ = match &line[..4] {

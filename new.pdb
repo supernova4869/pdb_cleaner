@@ -1,5 +1,5 @@
 REMARK Accelrys Discovery Studio PDB file by supernova
-CRYST1 CRYST1   62.411   62.411   82.569  90.00  90.00 120.00 P61
+CRYST1   62.411   62.411   82.569  90.00  90.00 120.00 P61
 ATOM      1  N   PRO A   1     -43.989  92.628  31.988  1.00  0.00            N1+
 ATOM      2  HT1 PRO A   1     -44.303  93.498  32.457  1.00  0.00            H  
 ATOM      3  HT2 PRO A   1     -44.790  91.960  32.103  1.00  0.00            H  
