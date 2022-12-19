@@ -11,14 +11,14 @@ Made by Supernova (https://www.zhihu.com/people/zhang-jia-xing-42-34)
 4. 重命名末端羧基O, 将DS输出的OCT[12]改为OC[12]
 
 ## Usage
-- Usage 0: pdb_cleaner                        # 直接查看此帮助
+- Usage 0: pdb_cleaner # 直接查看此帮助
 - Usage 1: pdb_cleaner input.pdb output.pdb
-- Usage 2: pdb_cleaner input.pdb              # 默认输出到new.pdb
+- Usage 2: pdb_cleaner input.pdb # 默认输出到new.pdb
 
 ## Examples
 
 ```bash
-# get pdb file prepared by DS
-pdb_cleaner test.pdb
+# get test.pdb file prepared by DS
+pdb_cleaner test.pdb # generates new.pdb
 gmx pdb2gmx -f new.pdb
 ```
