@@ -2,7 +2,6 @@ use std::{env, fmt, fs};
 use std::fmt::Display;
 use std::fs::File;
 use std::io::{stdin, Write};
-use regex::Regex;
 
 struct PDB {
     title: String,
@@ -142,9 +141,11 @@ fn clean_pdb(pdb: &str, out: &str) {
 
 fn parse_pdb(pdb_content: String) -> PDB {
     let pdb_content: Vec<&str> = pdb_content.split("\n").collect();
-    let re = Regex::new(r"(\s*by supernova)?$").unwrap();
 
-    let title = re.replace(pdb_content[0][7..].trim(), " by supernova").to_string();
+    let mut title: String = pdb_content[0][7..].trim().to_string();
+    if !title.ends_with("by supernova") {
+        title.push_str(" by supernova");
+    }
     let mut crystallographic = String::new();
     let mut residues: Vec<Residue> = vec![];
     let mut residue: Vec<Atom> = vec![];
