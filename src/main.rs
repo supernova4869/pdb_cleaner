@@ -150,8 +150,16 @@ fn parse_pdb(pdb_content: String) -> PDB {
     let mut residues: Vec<Residue> = vec![];
     let mut residue: Vec<Atom> = vec![];
 
-    let mut cur_res: i32 = pdb_content[3][22..26].trim().parse().unwrap();
-    for line in pdb_content {
+    // get start resnum
+    let mut cur_res: i32 = 0;
+    for s in &pdb_content {
+        if s.starts_with("ATOM") || s.starts_with("HETATM") {
+            cur_res = s[22..26].trim().parse().unwrap();
+            break;
+        }
+    }
+
+    for line in &pdb_content {
         if line.starts_with("CRYST1") {
             crystallographic = line.trim()[7..].to_string();
         }
